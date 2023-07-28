@@ -70,7 +70,14 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 
 
 
-8.  
+9.  Pull Accounts from Azure AD in preparation configuring AWS Profiles
+```
+cd /app/pim
+
+python3 create_config.py
+```
+
+10.  
 ---
 ---
 
