@@ -115,3 +115,37 @@ AWS_DEFAULT_REGION=us-east-1
 
 aws s3 ls
 ```
+
+*  Reminder your docker container will run until you stop it.  Useful commands referenced below.
+
+---
+---
+
+##  Docker Command Reference for Common Items:
+```
+# list all containers on host
+docker ps -a
+
+#  start an existing container
+docker start aws-ad-auth
+
+# connect to command line of this container
+docker exec -it aws-ad-auth bash
+
+#list running container
+docker container ls -all
+
+# stop a running container
+docker container stop aaws-ad-auth
+
+# remove a docker container
+docker container rm aws-ad-auth
+
+# list docker volumes
+docker volume ls
+
+# remove a docker volume
+docker volume rm awsadauth_vol1
+```
+---
+---
