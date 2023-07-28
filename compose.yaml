@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  awsbuild:
+    image: arm64v8/alpine:aws-ad-auth
+    container_name: aws-ad-auth
+    volumes:
+      - type: volume
+        source: alpinepim_vol1:
+        target: /app
+    command: ["tail", "-f", "/dev/null"]
+
+volumes:
+  alpinepim_vol1:
+    external: true
