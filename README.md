@@ -102,11 +102,11 @@ bash-5.1$ cat ~/.aws/config
 aws-azure-login --no-sandbox --profile <profile name value here>
 ```
 
-2.    It will prompt you for your Azure AD Password.   Enter that here
+2.    It will prompt you for your Azure AD Password.
 
-3.    It will prompt you for a code from your 2-factor authentication device here.
+3.    It will prompt you for a code from your 2-factor authentication device.
 
-4.    If all works without error you can see that it creates a new file with credentials here:  `cat ~/.aws/credentials`
+4.    If all works without error, you can see that it creates a new file with credentials here:  `cat ~/.aws/credentials`
 
 5.    Test that it is working with a sample aws cli command:
 ```
