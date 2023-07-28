@@ -6,10 +6,10 @@ services:
     container_name: aws-ad-auth
     volumes:
       - type: volume
-        source: alpinepim_vol1:
+        source: awsadauth_vol1:
         target: /app
     command: ["tail", "-f", "/dev/null"]
 
 volumes:
-  alpinepim_vol1:
+  awsadauth_vol1:
     external: true
