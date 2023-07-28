@@ -59,12 +59,12 @@ az login
 To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code <your specfic code> to authenticate.
 ```
 
-    A.  Open a chrome browser on your host and give it the URL `https://microsoft.com/devicelogin`.   
-    B.  It will ask you to enter the code from your container `<your specfic code>`.   
-    C.  From here you will select your Microsoft AD account.  
-    D.  Then click the `Continue` button from the next screen.
-    E.  If all is working you should see the follow image.
-    ![](./images/azure_ad_success.png)
+> Open a chrome browser on your host and give it the URL `https://microsoft.com/devicelogin`.   
+> It will ask you to enter the code from your container `<your specfic code>`.   
+> From here you will select your Microsoft AD account.  
+> Then click the `Continue` button from the next screen.
+> If all is working you should see the follow image.
+> ![](./images/azure_ad_success.png)
 
 
 
