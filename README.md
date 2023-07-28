@@ -154,6 +154,12 @@ docker volume ls
 
 # remove a docker volume
 docker volume rm awsadauth_vol1
+
+# list local docker images
+docker image ls
+
+# remove a local image
+docker image rm <image ID>
 ```
 ---
 ---
