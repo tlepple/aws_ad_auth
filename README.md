@@ -144,7 +144,7 @@ docker exec -it aws-ad-auth bash
 docker container ls -all
 
 # stop a running container
-docker container stop aaws-ad-auth
+docker container stop aws-ad-auth
 
 # remove a docker container
 docker container rm aws-ad-auth
