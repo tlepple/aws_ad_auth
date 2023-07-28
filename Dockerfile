@@ -65,15 +65,10 @@ RUN apk add --no-cache --update python3 py3-pip && \
     pip install azure-cli && \
     apk del --purge build
 
-# Set the environment variables to avoid interactive prompts during aws configure
-USER root
-RUN mkdir -p /home/pptruser/.aws && \
-    touch /home/pptruser/.aws/credentials /home/pptruser/.aws/config && \
-    chown -R pptruser:pptruser /home/pptruser/.aws
-    
-# Add user so we don't need --no-sandbox.
+# Add user as work around for puppeteer security.
 RUN addgroup -S pptruser && adduser -S -G pptruser pptruser \
-    && mkdir -p /home/pptruser/Downloads /app \
+    && mkdir -p /home/pptruser/Downloads /app /home/pptruser/.aws \
+    && touch /home/pptruser/.aws/credentials /home/pptruser/.aws/config \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /app
 
