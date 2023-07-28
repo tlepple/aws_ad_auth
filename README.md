@@ -5,7 +5,7 @@
 
 ### Overview:
 ---
-This repo is used to build a custom docker container that will run on `MacOS` with an M2 processor that will allow you to authenticate from a terminal window to Azure AD.   After authenticating to Azure AD you will be able to execute AWS CLI commands as a `Federated user` for a short period of time (without the need to create <AWS Access Keys> and <AWS Secret Keys>.
+This repo is used to build a custom docker container that will run on `MacOS` with an M2 processor that will allow you to authenticate from a terminal window to Azure AD.   After authenticating to Azure AD, you will be able to execute AWS CLI commands as a `Federated user` for a short period of time (without the need to create `<AWS Access Keys>` and `<AWS Secret Keys>`.
 
 *  Shoutout to Brian Lachance for the shell script and python code used here.
 
