@@ -135,7 +135,7 @@ aws s3 ls
 docker ps -a
 
 #  start an existing container
-docker start aws-ad-auth
+docker container start aws-ad-auth
 
 # connect to command line of this container
 docker exec -it aws-ad-auth bash
