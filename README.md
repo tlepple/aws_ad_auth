@@ -64,7 +64,7 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
     3. From here you will select your Microsoft AD account.  
     4. Then click the `Continue` button from the next screen.
     5. If all is working you should see the follow image.
-    ![](./images/azure_ad_success.png)
+![](./images/azure_ad_success.png)
 
 
 
