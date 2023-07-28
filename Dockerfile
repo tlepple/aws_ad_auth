@@ -66,11 +66,11 @@ RUN apk add --no-cache --update python3 py3-pip && \
     apk del --purge build
 
 # Set the environment variables to avoid interactive prompts during aws configure
-ENV AWS_ACCESS_KEY_ID=""
-ENV AWS_SECRET_ACCESS_KEY=""
-ENV AWS_DEFAULT_REGION=""
-ENV AWS_DEFAULT_OUTPUT="json"
-
+USER root
+RUN mkdir -p /home/pptruser/.aws && \
+    touch /home/pptruser/.aws/credentials /home/pptruser/.aws/config && \
+    chown -R pptruser:pptruser /home/pptruser/.aws
+    
 # Add user so we don't need --no-sandbox.
 RUN addgroup -S pptruser && adduser -S -G pptruser pptruser \
     && mkdir -p /home/pptruser/Downloads /app \
@@ -81,8 +81,6 @@ RUN addgroup -S pptruser && adduser -S -G pptruser pptruser \
 USER pptruser
 
 WORKDIR /app/pim
-
-RUN aws configure
 
 # Set the command to run aws configure and the Node.js command using shell
 CMD bash -c "node -e \"console.log('alpine linux is installed!')\""
