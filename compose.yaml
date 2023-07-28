@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   awsbuild:
-    image: arm64v8/alpine:aws-ad-auth
+    image: arm64v8/alpine:aws-ad-auth-img
     container_name: aws-ad-auth
     volumes:
       - type: volume
