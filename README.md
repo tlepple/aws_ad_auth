@@ -70,14 +70,48 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 
 
 
-9.  Pull Accounts from Azure AD in preparation configuring AWS Profiles
+9.  Extract from Azure AD account profiles you are authorized to access in preparation for next steps.
 ```
 cd /app/pim
 
 python3 create_config.py
 ```
 
-10.  
+10.  Setup aws configuration files with Account Profiles gathered in previous step.
+```
+. update_config.sh
+```
+*  It will prompt you for some input.   Sample output here:
+
+```
+Enter Azure AD Username: <input your AD email address here>
+Enter AWS Session Role Name: <input your role name to include here> Example:  CDPOne_FullAccess
+Updated configuration merged into ~/.aws/config successfully.
+bash-5.1$ cat ~/.aws/config 
+```
+
+*  Set Up Complete
+
 ---
 ---
 
+###   Verify all is working:
+
+1.    Login from the terminal window
+```
+aws-azure-login --no-sandbox --profile <profile name value here>
+```
+
+2.    It will prompt you for your Azure AD Password.   Enter that here
+
+3.    It will prompt you for a code from your 2-factor authentication device here.
+
+4.    If all works without error you can see that it creates a new file with credentials here:  `cat ~/.aws/credentials`
+
+5.    Test that it is working with a sample aws cli command:
+```
+export AWS_PROFILE=<profile name here>
+AWS_DEFAULT_REGION=us-east-1
+
+aws s3 ls
+```
