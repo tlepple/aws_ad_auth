@@ -21,7 +21,7 @@ This repo is used to build a custom docker container that will run on `MacOS` wi
 git clone https://github.com/tlepple/aws_ad_auth.git
 ```
 
-2.  Change to this repo directory on your machine
+2.  Change to this new directory on your machine
 ```
 cd ./aws_ad_auth
 ```
@@ -48,6 +48,22 @@ docker compose up -d
 docker exec -it aws-ad-auth bash
 ```
 7.  Setup a local aws config file with profiles you have access to from Azure AD credentials
+```
+cd /app/pim
+
+az login
+```
+
+*  This will return output similar to this:
+```
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code <your specfic code> to authenticate.
+```
+*  Open a chrome browser on your host and give it the URL `https://microsoft.com/devicelogin`.   It will ask you to enter the code from your container `<your specfic code>`.   From here you will select your Microsoft AD account.  Then click the `Continue` button from the next screen.
+
+
+
+
+8.  
 ---
 ---
 
