@@ -21,7 +21,7 @@ This repo is used to build a custom docker container that will run on `MacOS` wi
 
 ### One Time Setup Step:
 
-* These commands are all run from a `Terminal` window.
+* These commands need to be run from a `Terminal` window.
 ---
 
 1. Pull this repository to your machine
