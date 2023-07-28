@@ -5,7 +5,7 @@ Last Updated:  07.28.2023
 Tags:  AWSCLI | azurecli | aws-azure-login
 ---
 
-# aws_ad_auth
+# AWS Azure Login Project
 
 ---
 ---
