@@ -1,7 +1,7 @@
 ---
 Title:  Azure AD Authentication to AWS Command Line Interface (cli)
 Author:  Tim Lepple
-Last Updated:  07.28.2023
+Last Updated:  09.23.2024
 Tags:  AWSCLI | azurecli | aws-azure-login
 ---
 
